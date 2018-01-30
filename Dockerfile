@@ -1,4 +1,4 @@
-FROM vcatechnology/ubuntu
+FROM vcatechnology/ubuntu-ci
 MAINTAINER VCA Technology <developers@vcatechnology.com>
 
 # Build-time metadata as defined at http://label-schema.org
@@ -31,5 +31,5 @@ RUN sudo vca-install-package \
   python-sphinx-rtd-theme
 
 # Install pip packages
-RUN sudo pip install pytest-ordering PyGObject yapf requests
+RUN pip install --user pytest-ordering PyGObject yapf requests
 
