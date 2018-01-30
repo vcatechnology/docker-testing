@@ -25,7 +25,6 @@ RUN sudo vca-install-package \
   gobject-introspection \
   git \
   python-pip \
-  python-gobject \
   python-gi \
   libgstreamer0.10-dev \
   libgstrtspserver-1.0-dev
@@ -34,6 +33,6 @@ RUN sudo vca-install-package \
 RUN sudo pip install --upgrade pip
 
 # Install pip packages
-RUN sudo pip install pytest-ordering yapf requests pytest pylint sphinx sphinx_rtd_theme
+RUN sudo pip install pytest-ordering yapf requests pytest pylint sphinx sphinx_rtd_theme PyGObject
 
 
