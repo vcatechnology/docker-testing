@@ -25,7 +25,6 @@ RUN sudo vca-install-package \
   gobject-introspection \
   git \
   python-pip \
-  python-gi \
   libgstreamer0.10-dev \
   libgstrtspserver-1.0-dev
 
