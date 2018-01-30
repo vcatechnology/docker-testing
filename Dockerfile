@@ -28,8 +28,10 @@ RUN sudo vca-install-package \
   pylint \
   python-pytest \
   python-sphinx \
-  python-sphinx-rtd-theme
+  python-sphinx-rtd-theme \
+  python-gobject \
+  python-gi
 
 # Install pip packages
-RUN pip install --user pytest-ordering PyGObject yapf requests
+RUN pip install --user pytest-ordering yapf requests
 
