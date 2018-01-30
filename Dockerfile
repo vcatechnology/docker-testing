@@ -33,5 +33,5 @@ RUN sudo vca-install-package \
   python-gi
 
 # Install pip packages
-RUN pip install --user pytest-ordering yapf requests
+RUN sudo pip install pytest-ordering yapf requests
 
