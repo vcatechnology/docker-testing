@@ -25,13 +25,16 @@ RUN sudo vca-install-package \
   gobject-introspection \
   git \
   python-pip \
-  pylint \
-  python-pytest \
   python-sphinx \
   python-sphinx-rtd-theme \
   python-gobject \
-  python-gi
+  python-gi \
+  libgstreamer0.10-dev \
+  libgstrtspserver-1.0-dev
+
+# Upgrade pip to the latest version
+RUN sudo pip install --upgrade pip
 
 # Install pip packages
-RUN sudo pip install pytest-ordering yapf requests
+RUN sudo pip install pytest-ordering yapf requests pytest pylint
 
