@@ -36,7 +36,6 @@ RUN sudo unlink /usr/bin/python
 RUN sudo ln -s /usr/bin/python3 /usr/bin/python
 
 # Change default pip version from 2 to 3
-RUN sudo rm /usr/bin/pip
 RUN sudo ln -s /usr/bin/pip3 /usr/bin/pip
 
 # Upgrade pip to the latest version
