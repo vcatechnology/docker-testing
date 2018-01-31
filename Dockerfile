@@ -24,10 +24,20 @@ RUN sudo vca-install-package \
   libcairo2 \
   gobject-introspection \
   git \
-  python-pip \
-  python-gi \
+  python3 \
+  python3-pip \
+  python3-gi \
+  python3-gi-cairo \
   libgstreamer0.10-dev \
   libgstrtspserver-1.0-dev
+
+# Change default python version from 2 to 3
+RUN sudo unlink /usr/bin/python
+RUN sudo ln -s /usr/bin/python3 /usr/bin/python
+
+# Change default pip version from 2 to 3
+RUN sudo rm /usr/bin/pip
+RUN sudo ln -s /usr/bin/pip3 /usr/bin/pip
 
 # Upgrade pip to the latest version
 RUN sudo pip install --upgrade pip
